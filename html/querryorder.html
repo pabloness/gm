@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/mine.css">
+    <link rel="stylesheet" href="../css/querryorder.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/mine.js"></script>
+    <script src="../js/chartroom.js"></script>
+    <script src="../js/Cookie.js"></script>
+    <script src="../js/querryorder.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="pageCont">
+            <div class="right fl">
+                <div class="rightTitle">
+                    <p>
+                        <i></i>
+                        <span>GM工具</span>
+                        <i>&gt;</i>
+                        <span>订单查询</span>
+                    </p>
+                </div>
+                <div class="rightDown">
+                    <div class="public">
+                        <div class="type fl">
+                            <div class="words fl">
+                                <label>openId：</label>
+                            </div>
+                            <input class="fl" type="text" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"
+                            placeholder="请输入昵称或UID">
+                            <div class="search-button fl">
+                                <input id="searchbtn" type="button" value="搜索">
+                            </div>
+                        </div>                        
+                    </div>
+                    <div>
+                        <table class="table">
+                            <thead class="table-row-group" id="table_head">
+                                <tr class="table-header-row">
+                                    <th class="table-cell">日期</th>
+                                    <th class="table-cell">购买内容</th>
+                                    <th class="table-cell">支付金额</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-row-group" id="table_row_body">
+
+                            </tbody>
+                        </table>
+                        <div class="pages">
+                            <div class="fenye">
+                                <a href="javascript:;" class="backpage" onclick="Fpages()" title="上一页"><<</a>
+                                <span>共<em id="total"></em>条，本页显示<em id="num"></em>条，当前是第<em id="page"></em>页</span>
+                                <a href="javascript:;" class="nextpage" onclick="Rpages()" title="下一页">>></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

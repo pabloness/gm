@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/mine.js"></script>
+    <script src="../js/chartroom.js"></script>
+    <script src="../js/login.js"></script>
+    <script src="../js/Cookie.js"></script>
+</head>
+<body>
+<div class="message warning">
+    <div class="inset">
+        <div class="login-head">
+            <h1>游戏后台登录</h1>
+        </div>
+        <form  method="post">
+            <ul>
+                <li>
+                    <input type="text" class="text" placeholder="用户名" required="required" maxlength="10" id="page1_jEdit1">
+                    <a href="#" class="icon user"></a>
+                </li>
+                <li>
+                    <input type="password" placeholder="密码" required="required" maxlength="50" id="page1_jEdit2">
+                    <a href="#" class="icon lock"></a>
+                </li>
+            </ul>
+            <div class="submit">
+                <input type="button" value="登陆"  onclick="Select_as_Banned()">
+                <div class="clear"></div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+<script>
+    function post(URL, PARAMS) {
+        window.alert('xxx');
+        var temp = document.createElement('form');
+        temp.action = URL;
+        temp.method = 'post';
+        temp.style.display = 'none';
+        for (var x in PARAMS) {
+            var opt = document.createElement('textarea');
+            opt.name = x;
+            opt.value = PARAMS[x];
+            alert(opt.value);
+            alert(opt.name);
+            temp.appendChild(opt);
+        }
+        document.body.appendChild(temp);
+        temp.submit();
+        return temp;
+    }
+    const requestPost = ({url, data})=>{
+        //首先创建一个用来发送数据的iframe
+        const iframe = document.createElement('iframe');
+        iframe.name = 'iframePost';
+        iframe.style.display = 'none';
+        document.body.appendChild(iframe);
+        const form = document.createElement('form');
+        const node = document.createElement('input');
+        //注册iframe的load事件处理程序，如果你需要在响应返回时执行一些操作的话
+        iframe.addEventListener('load', function () {
+            console.log('post success');
+        });
+        form.action =httpHead+IPconf+':'+prot+'/'+url;
+        form.target = iframe.name;
+        form.method = 'post';
+        for(let name in data){
+            node.name = name;
+            node.value = data[name].toString();
+            form.appendChild(node.cloneNode());
+        }
+        form.style.display = 'none';
+        document.body.appendChild(form);
+        form.submit();
+        document.body.removeChild(form);
+    }
+    // function Select_as_Banned(){
+    //     let username = document.getElementById("page1_jEdit1").value;
+    //     let pas = document.getElementById("page1_jEdit2").value;
+    //     // requestPost({
+    //     //     url:'login',
+    //     //     data:{
+    //     //         account:username,
+    //     //         password:pas,
+    //     //     }
+    //     // })
+    //     let httpRequest = new XMLHttpRequest();
+    //     httpRequest.open('POST', 'http://'+IPconf+':'+prot+'/login', true);
+    //     httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    //     let data = JSON.stringify({
+    //         account:username,
+    //         password:pas,
+    //     });
+    //     httpRequest.send(data);
+    //     httpRequest.onreadystatechange = function () {
+    //         if(httpRequest.readyState == 4 && httpRequest.status==200){
+    //             let json = httpRequest.responseText;
+    //             let data =  eval("(" + json + ")");
+    //             if(data.hasOwnProperty("error")){
+    //                 alert(data.error);
+    //                 return;
+    //             }
+    //             SetCookie("token",JSON.stringify(data.token),2);
+    //             SetCookie("urls",JSON.stringify(data.urls),24);
+    //             SetCookie("sids",JSON.stringify(data.sids),24);
+    //             SetCookie("pfs",JSON.stringify(data.pfs),24);
+    //             SetCookie("username",JSON.stringify(username),24);
+    //             window.location.href = "dataall.html";
+    //         }
+    //     }
+        //
+        // $.ajax({
+        //     type:"POST",
+        //     url:"http://"+IPconf+":"+prot+"/login",
+        //     contentType:"application/json",
+        //     data:JSON.stringify({account:username,password:pas}),
+        //     dataType:"json",
+        //     success:function (result) {
+        //         console.log("成功了！");
+        //         window.location.href = "dataall.html";
+        //     },
+        //     error:function (result) {
+        //         console.log(result);
+        //         console.log("网络出错");
+        //     }
+        // });
+
+        //post("http://"+IPconf+":"+prot+"/login",{account:username,password:pas});
+
+        //     .done(function (data) {
+        //
+        // }).error(function (jqXHR, textStauts, errorThrown) {
+        //     console.log("网络出错")
+        // });
+
+    // }
+</script>

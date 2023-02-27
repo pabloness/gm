@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>实时统计</title>
+    <link rel="stylesheet" href="../css/mine.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/realtime.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/realtime.js"></script>
+    <script src="../js/mine.js"></script>
+    <script src="../js/chartroom.js"></script>
+    <script src="../js/Cookie.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="pageCont">
+            <div class="right fl">
+                <div class="rightTitle">
+                    <p>
+                        <i></i>
+                        <span>概况</span>
+                        <i>></i>
+                        <span>实时统计</span>
+                    </p>
+                </div>
+                <div class="rightDown">
+                    <div class="public">
+                        <div class="type fl">
+                            <div class="words fl">
+                                <label for="">渠道选择：</label>
+                            </div>
+                            <select class="fl" name="qudao" id="selqudao">
+                                <option value="" id="qudao_1">渠道1</option>
+                                <option value="" id="qudao_2">渠道2</option>
+                                <option value="" id="qudao_3">渠道3</option>
+                            </select>
+                            <div class="words fl">
+                                <label for="">服务器：</label>
+                            </div>
+                            <select class="fl" name="service" id="selservice">
+                                <option value="" id="service_1">服务器1</option>
+                            </select>
+                            <div class="words fl">
+                                <label for="">操作系统：</label>
+                            </div>
+                            <select class="fl" name="system" id="selsystem">
+                                <option value="1" id="system_1">安卓</option>
+                                <option value="2" id="system_2">ios</option>
+                            </select>
+                            <div class="words fl">
+                                <label for="">时间：</label>
+                            </div>
+                            <div class="timer fl">
+                                <input type="datetime-local" id="begintime"> 到 <input type="datetime-local" id="endtime">
+                            </div>
+                            <div class="search-button fl">
+                                <input type="button" type="button" value="搜索">
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table" id="print_table">
+                        <thead class="table-row-group">
+                            <tr class="table-header-row">
+                                <th class="table-cell">时间</th>
+                                <th class="table-cell">累计用户</th>
+                                <th class="table-cell">新增用户</th>
+                                <th class="table-cell">活跃用户</th>
+                                <th class="table-cell">付费用户</th>
+                                <th class="table-cell">新增付费用户</th>
+                                <th class="table-cell">付费金额</th>
+                                <th class="table-cell">付费率</th>
+                                <th class="table-cell">新增付费率</th>
+                                <th class="table-cell">ARPU</th>
+                                <th class="table-cell">ARPPU</th>
+                                <th class="table-cell">次日留存</th>
+                                <th class="table-cell">3日留存</th>
+                                <th class="table-cell">7日留存</th>
+                                <th class="table-cell">14日留存</th>
+                                <th class="table-cell">30日留存</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-row-group" id="table-body">
+                            <tr class="table-row">
+                                <td class="table-cell">总计</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                                <td class="table-cell">n</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="pages">
+                        <div class="fenye">
+                            <a href="javascript:;" class="backpage" onclick="Fpages()" title="上一页"><<</a>
+                            <span>第<em id="page" style="color: #5bc0de"></em>页，本页显示<em id="num" style="color: #5bc0de"></em>条，共<em id="total" style="color: #5bc0de"></em>条</span>
+                            <a href="javascript:;" class="nextpage" onclick="Rpages()" title="下一页">>></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/mine.css">
+    <link rel="stylesheet" href="../css/servicemanager.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/mine.js"></script>
+    <script src="../js/chartroom.js"></script>
+    <script src="../js/Cookie.js"></script>
+    <script src="../js/servicemanager.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="pageCont">
+            <div class="right fl">
+                <div class="rightTitle">
+                    <p>
+                        <i></i>
+                        <span>GM工具</span>
+                        <i>&gt;</i>
+                        <span>服务器管理</span>
+                    </p>
+                </div>
+                <div class="rightDown">
+                    <div class="loginList fl">
+                        <div class="channelSelection dom">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>专服Id</span>
+                            <!-- <select name="" id="PropName">
+                                <option value="">所有渠道</option>
+                                <option value="">渠道一</option>
+                                <option value="">渠道二</option>
+                                <option value="">渠道三</option>
+                            </select> -->
+                            <input type="text" id="zhuanfu" placeholder="请输入专服id">
+                        </div>
+                        <div class="channelSelection dom">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>服务器选择</span>
+                            <select name="" id="ServiceName">
+                                <option value="">所有服务器</option>
+                                <option value="">服务器一</option>
+                                <option value="">服务器二</option>
+                                <option value="">服务器三</option>
+                            </select>
+                        </div>
+                        <div class="submit dom">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <input type="submit" value="配置更新" id="peizhibtn">
+                            <input type="submit" value="服务器启动" id="openbtn">
+                            <input type="submit" value="服务器踢人" id="kickbtn">
+                            <input type="submit" value="服务器关闭" id="closebtn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>后台管理系统</title>
+        <link rel="stylesheet" href="../css/reset.css">
+        <link rel="stylesheet" href="../css/mine.css">
+        <link rel="stylesheet" href="../css/servicelist.css">
+        <script src="../js/jquery-1.12.4.min.js"></script>
+        <script src="../js/mine.js"></script>
+        <script src="../js/chartroom.js"></script>
+        <script src="../js/Cookie.js"></script>
+        <script src="../js/servicelist.js"></script>
+    </head>
+    <body>
+        <div class="content">
+            <div class="pageCont">
+                <div class="right fl">
+                    <div class="rightTitle">
+                        <p>
+                            <i></i>
+                            <span>GM工具</span>
+                            <i>></i>
+                            <span>服务器列表</span>
+                        </p>
+                    </div>
+                    <div class="rightDown">
+                        <div class="public">
+                            <div class="type fl">
+                                <div class="words fl">
+                                    <label for="">渠道：</label>
+                                </div>
+                                <select class="fl" name="qudao" id="selqudao">
+                                    <option value="" id="qudao_1">渠道1</option>
+                                    <option value="" id="qudao_2">渠道2</option>
+                                    <option value="" id="qudao_3">渠道3</option>
+                                </select>
+                                <div class="search-button fl">
+                                    <input id="searchbtn" type="button" value="搜索">
+                                </div>
+                            </div>
+                        </div>
+                        <table class="table">
+                                <thead class="table-row-group" id="table_head">
+                                    <tr class="table-header-row">
+                                        <th class="table-cell">服务器Id</th>
+                                        <th class="table-cell">开服日期</th>
+                                        <th class="table-cell">合服日期</th>
+                                        <th class="table-cell">主服Id</th>
+                                        <th class="table-cell">专服Id</th>
+                                        <th class="table-cell">负载数</th>
+                                        <th class="table-cell">所在地址</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-row-group" id="table_row_body">
+    
+                                </tbody>
+                        </table>
+                        <div class="pages">
+                                <div class="fenye">
+                                    <a href="javascript:;" class="backpage" onclick="Fpages()" title="上一页"><<</a>
+                                    <span>共<em id="total">0</em>条，本页显示<em id="num">0</em>条，当前是第<em id="page">1</em>页</span>
+                                    <a href="javascript:;" class="nextpage" onclick="Rpages()" title="下一页">>></a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

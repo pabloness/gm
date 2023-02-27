@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/mine.css">
+    <link rel="stylesheet" href="../css/usermessage.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/mine.js"></script>
+    <script src="../js/chartroom.js"></script>
+    <script src="../js/Cookie.js"></script>
+    <script src="../js/usermessage.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="pageCont">
+            <div class="right fl">
+                <div class="rightTitle">
+                    <P>
+                        <i></i>
+                        <span>用户管理</span>
+                        <i>&gt;</i>
+                        <span>用户信息</span>
+                    </P>
+                </div>
+                <div class="rightDown">
+                    <div class="public">
+                        <div class="listmodel">
+                            <div class="listdrop" id="listdrop">
+                                <ul>
+                                    <li><a id="sTob">正序</a></li>
+                                    <li><a id="bTos">倒序</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="type fl">
+                            <div class="words fl">
+                                <label for="">昵称:</label>
+                            </div>
+                            <input class="fl" type="text" id="uid" placeholder="请输入昵称">
+                            <div class="words fl">
+                                <label for="">渠道选择：</label>
+                            </div>
+                            <select class="fl" name="qudao" id="selqudao">
+                                <option value="" id="qudao_1">渠道1</option>
+                                <option value="" id="qudao_2">渠道2</option>
+                                <option value="" id="qudao_3">渠道3</option>
+                            </select>
+                            <div class="words fl">
+                                <label for="">服务器：</label>
+                            </div>
+                            <select class="fl" name="service" id="selservice">
+                                <option value="" id="service_1">服务器1</option>
+                                <option value="" id="service_2">服务器2</option>
+                                <option value="" id="service_3">服务器3</option>
+                            </select>
+                            <div class="words fl">
+                                <label for="">操作系统：</label>
+                            </div>
+                            <select class="fl" name="system" id="selsystem">
+                                <option value= 0 id="system_1">全部</option>
+                                <option value= 1 id="system_1">安卓</option>
+                                <option value= 2 id="system_2">ios</option>
+                            </select>
+                            <div class="words fl">
+                                <label for="">选择时间：</label>
+                            </div>
+                            <div class="timer fl">
+                                <input type="date" id="starttime" onchange="dateChange()"> 到 <input type="date" id="endtime" onchange="dateChange()">
+                            </div>
+                            <div class="search-button fl">
+                                <input id="searchbtn" type="button" value="搜索">
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead class="table-row-group" id="table_head">
+                            <tr class="table-header-row">
+                                <th class="table-cell">序号</th>
+                                <th class="table-cell">账号id</th>
+                                <th class="table-cell">角色id</th>
+                                <th class="table-cell">渠道</th>
+                                <th class="table-cell">角色昵称</th>
+                                <th class="table-cell">角色等级</th>
+                                <th class="table-cell">VIP等级</th>
+                                <th class="table-cell">充值额度</th>
+                                <th class="table-cell">钻石</th>
+                                <th class="table-cell">元宝</th>
+                                <th class="table-cell">金币</th>
+                                <th class="table-cell">战力</th>
+                                <th class="table-cell">所在宗门</th>
+                                <th class="table-cell">竞技排名</th>
+                                <th class="table-cell">创建时间</th>
+                                <th class="table-cell">最后登录时间</th>
+                                <th class="table-cell">ip地址</th>
+                                <th class="table-cell">是否流失</th>
+                                <th class="table-cell">是否禁言</th>
+                                <th class="table-cell">是否封号</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-row-group" id="table_row_body">
+                            <ul class="table-row">
+
+                            </ul>
+                        </tbody>
+                    </table>
+                    <div class="pages">
+                        <div class="fenye">
+                            <a href="javascript:;" class="backpage" onclick="Fpages()" title="上一页"><</a>
+                            <span>共<em id="total"></em>条，本页显示<em id="num"></em>条，当前是第<em id="page"></em>页</span>
+                            <a href="javascript:;" class="nextpage" onclick="Rpages()" title="下一页">>></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
