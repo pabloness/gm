@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后台管理系统</title>
+    <!-- <style>
+        @import "DataTables-1.10.20";
+    </style> -->
+    <link rel="stylesheet" href="../css/mine.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/dataall.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            Tabs(".list-item", ".contents", "list-item-checked", "contents-checked");
+            Tabs(".list-item-1", ".contents-1", "list-item-1-checked", "contents-1-checked");
+            Tabs(".list-item-2", ".contents-2", "list-item-2-checked", "contents-2-checked");
+        }
+    </script>
+    <script src="../js/dataall.js"></script>
+    <script src="../js/mine.js"></script>
+    <script src="../js/Cookie.js"></script>
+    <script src="../js/chartroom.js"></script>
+    <script src="../js/echarts.js"></script>
+    <script src="../js/excldownload.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="pageCont">
+            <div class="right fl">
+                <div class="rightTitle">
+                    <p>
+                        <i></i>
+                        <span>概况</span>
+                        <i>></i>
+                        <span>数据总览</span>
+                    </p>
+                </div>
+                <div class="rightDown">
+                    <div class="public">
+                        <div class="type fl">
+                            <div class="words fl">
+                                <label for="">渠道选择：</label>
+                            </div>
+                            <select class="fl" name="qudao" id="selqudao">
+                                <option value="" id="qudao_1">渠道1</option>
+                                <option value="" id="qudao_2">渠道2</option>
+                                <option value="" id="qudao_3">渠道3</option>
+                            </select>
+                            <div class="words fl">
+                                <label for="">服务器：</label>
+                            </div>
+                            <select class="fl" name="service" id="selservice">
+                                <option value="" id="service_1">服务器1</option>
+                                <option value="" id="service_2">服务器2</option>
+                                <option value="" id="service_3">服务器3</option>
+                            </select>
+                            <div class="words fl">
+                                <label for="">操作系统：</label>
+                            </div>
+                            <select class="fl" name="system" id="selsystem">
+                                <option value = 0 id="system_all">所有</option>
+                                <option value = 1 id="system_1">安卓</option>
+                                <option value = 2 id="system_2">ios</option>
+                            </select>
+                            <div class="words fl">
+                                <label for="">选择时间：</label>
+                            </div>
+                            <div class="timer fl">
+                                <input type="date" id="starttime" onchange="dateChange()"> 到 <input type="date" id="endtime" onchange="dateChange()">
+                            </div>
+                            <div class="search-button fl">
+                                <input class="button" type="button" value="搜索">
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table" border="1px" id="print_table">
+                        <thead  class="table-row-group" id="table-head">
+                            <tr class="table-header-row">
+                                <th class="table-cell">新增激活</th>
+                                <th class="table-cell">新增用户</th>
+                                <th class="table-cell">活跃用户</th>
+                                <th class="table-cell">一次性用户</th>
+                                <th class="table-cell">付费用户</th>
+                                <th class="table-cell">付费总额</th>
+                                <th class="table-cell">付费率</th>
+                                <th class="table-cell">ARPU</th>
+                                <th class="table-cell">ARPPU</th>
+                                <th class="table-cell">转化率</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-row-group" id="table-body">
+                            <tr class="table-row">
+                                <td class="table-cell">0</td>
+                                <td class="table-cell">0</td>
+                                <td class="table-cell">0</td>
+                                <td class="table-cell">0</td>
+                                <td class="table-cell">0</td>
+                                <td class="table-cell">0</td>
+                                <td class="table-cell">0</td>
+                                <td class="table-cell">0</td>
+                                <td class="table-cell">0</td>
+                                <td class="table-cell">0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- <div>
+                        <a id="text_a" href="javascript:;">点击下载表格</a>
+                    </div> -->
+                    <div class="little_title">
+                        <label>关键指标：</label> 
+                        <label id="title_1"></label>
+                    </div>
+                    <div class="switch" id="zhibiao">
+                        <ul class="title">
+                            <li id="what"><a id="a_0" href="javascript:;">新增激活/角色</a></li>
+                            <li id="second"><a id="a_1" href="javascript:;">活跃玩家</a></li>
+                            <li id="third"><a id="a_2" href="javascript:;">付费玩家</a></li>
+                        </ul>
+                    </div>
+                    <ul class="list-title">
+                        <li class="list-item list-item-checked">表</li>
+                        <li class="list-item">图</li>
+                    </ul>
+                    <div class="content-box" style="height: 420px;">
+                        <div class="contents contents-checked">
+                            <table class="table" border="1px" id="zhibiao_table">
+                                <thead  class="table-row-group" id="zhibiao_table_head">
+                                    <tr class="table-header-row">
+                                        <th class="table-cell">日期</th>
+                                        <th class="table-cell">新增用户</th>
+                                        <th class="table-cell">新增创建</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-row-group" id="zhibiao_table_body">
+                                    <tr class="table-row">
+                                        <td class="table-cell">0</td>
+                                        <td class="table-cell">0</td>
+                                        <td class="table-cell">0</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="pages" style="width: 1650px;">
+                                <div class="fenye" style="margin-left: 200px;">
+                                    <a id="leftbtn_1" href="javascript:;" class="backpage" title="上一页"><<</a>
+                                    <span>第<em id="page_1" style="color: #5bc0de"></em>页，本页显示<em id="num_1" style="color: #5bc0de"></em>条，共<em id="total_1" style="color: #5bc0de"></em>条</span>
+                                    <a id="rightbtn_1" href="javascript:;" class="nextpage" title="下一页">>></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents">
+                            <div id="mychart_1" style="width: 1500px;height: 400px;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- <div>
+                        <a id="text_b" href="javascript:;">点击下载表格</a>
+                    </div> -->
+                    <div class="little_title">
+                        <label>付费渗透：</label> 
+                        <label id="title_2"></label>
+                    </div>
+                    <ul class="list-title">
+                        <li class="list-item-1 list-item-1-checked">表</li>
+                        <li class="list-item-1">图</li>
+                    </ul>
+                    <div class="content-box" style="height: 420px;">
+                        <div class="contents-1 contents-1-checked">
+                            <table class="table" border="1px" id="shentou">
+                                <thead class="table-row-group" id="shentou_table_head">
+                                    <tr class="table-header-row">
+                                        <th class="table-cell">日期</th>
+                                        <th class="table-cell">日付费率</th>
+                                        <th class="table-cell">日ARPU</th>
+                                        <th class="table-cell">日ARPPU</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-row-group" id="shentou_table_body">
+        
+                                </tbody>
+                            </table>
+                            <div class="pages" style="width: 1650px;">
+                                <div class="fenye" style="margin-left: 200px;">
+                                    <a id="leftbtn_2" href="javascript:;" class="backpage" title="上一页"><<</a>
+                                    <span>第<em id="page_2" style="color: #5bc0de"></em>页，本页显示<em id="num_2" style="color: #5bc0de"></em>条，共<em id="total_2" style="color: #5bc0de"></em>条</span>
+                                    <a id="rightbtn_2" href="javascript:;" class="nextpage" title="下一页">>></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents-1">
+                            <div id="mychart_2" style="width: 1500px;height: 400px;"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="little_title">
+                        <label>玩家留存:</label> 
+                        <label id="title_3"></label>
+                    </div>
+                    <div class="switch" id="retain">
+                        <ul class="title">
+                            <li id="fouth"><a id="a_3" href="javascript:;">新增设备留存</a></li>
+                            <li id="fifth"><a id="a_4" href="javascript:;">新增账号留存</a></li>
+                        </ul>
+                    </div>
+                    <ul class="list-title">
+                        <li class="list-item-2 list-item-2-checked">表</li>
+                        <li class="list-item-2">图</li>
+                    </ul>
+                    <div class="content-box" style="height: 420px;">
+                        <div class="contents-2 contents-2-checked">
+                            <table class="table" border="1px" id="retain_table">
+                                <thead class="table-row-group" id="retain_table_head">
+                                    <tr class="table-header-row">
+                                        <th class="table-cell">日期</th>
+                                        <th class="table-cell">日付费率</th>
+                                        <th class="table-cell">日ARPU</th>
+                                        <th class="table-cell">日ARPPU</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-row-group" id="retain_table_body">
+        
+                                </tbody>
+                            </table>
+                            <div class="pages" style="width: 1650px;">
+                                <div class="fenye" style="margin-left: 200px;">
+                                    <a id="leftbtn_3" href="javascript:;" class="backpage" title="上一页"><<</a>
+                                    <span>第<em id="page_3" style="color: #5bc0de"></em>页，本页显示<em id="num_3" style="color: #5bc0de"></em>条，共<em id="total_3" style="color: #5bc0de"></em>条</span>
+                                    <a id="rightbtn_3" href="javascript:;" class="nextpage" title="下一页">>></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contents-2">
+                            <div id="mychart_3" style="width: 1500px;height: 400px;"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

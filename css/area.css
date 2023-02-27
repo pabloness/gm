@@ -1,0 +1,153 @@
+.machineAccount>.sub{
+    display: block;
+}
+.machineAccount>.sub>li>.oneLi{
+    color: #f60;
+}
+.content>.pageCont>.right>.rightDown>.public {
+    /*float: inherit;*/
+}
+
+.content>.pageCont>.right>.rightDown>.public>.chooseTime {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.content>.pageCont>.right>.rightDown>.public>.chooseTime>label {
+    position: relative;
+    padding-left: 7px;
+    /*width: 6em;*/
+    height: 26px;
+    line-height: 26px;
+}
+
+.content>.pageCont>.right>.rightDown>.public>.type {
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+.content>.pageCont>.right>.rightDown>.public>.type>.choose {
+    position: relative;
+    top: 6px;
+    float: left;
+    margin-right: 30px;
+    white-space: nowrap;
+}
+
+.content>.pageCont>.right>.rightDown>.public>.type>.choose>.checkboxouter {
+    float: left;
+    position: relative;
+    margin: 0 auto;
+    width: 16px;
+    height: 16px;
+    background: url("../img/radio.png");
+}
+
+.content>.pageCont>.right>.rightDown>.public>.type>.choose input[type=radio], .kv-item .choose input[type=checkbox] {
+    position: relative;
+    *position: static;
+    float: left;
+    margin-right: -16px;
+}
+
+.content>.pageCont>.right>.rightDown>.public>.type>.choose .checkboxouter input[type="radio"] {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    background: red;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.content>.pageCont>.right>.rightDown>.public>.type>.choose .checkboxouter .radio {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 16px;
+    width: 16px;
+    background: none;
+}
+
+.content>.pageCont>.right>.rightDown>.public>.type>.choose .checkboxouter input[type="radio"]:checked ~.radio {
+    background: url("../img/radiochecked.png");
+}
+
+.content>.pageCont>.right>.rightDown>.public>.type>.choose .text {
+    float: left;
+    padding-left: 5px;
+    *padding-left: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+.content>.pageCont>.right>.rightDown>.public>.type>.timer {
+    margin-top: 2px;
+    font-size: 15px;
+}
+
+.content>.pageCont>.right>.rightDown>.public>.type>.search-button>input {
+    display: inline-block;
+    width: 135px;
+    height: 30px;
+    line-height: 30px;
+    background: #000033;
+    border: none;
+    border-radius: 3px;
+    color: #c96;
+    font-size: 14px;
+    cursor: pointer;
+    margin-left: 20px;
+    outline: none;
+}
+.content>.pageCont>.right>.rightDown>.rh_cont {
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.content>.pageCont>.right>.rightDown>.rh_cont>li {
+    display: none;
+}
+
+.content>.pageCont>.right>.rightDown>.rh_cont>.show {
+    display: block;
+}
+
+/**/
+.content>.pageCont>.right>.rightDown>.list>li{
+    display: inline-block;
+    width: 185px;
+    height: 110px;
+    border: 1px solid #ccc;
+    margin: 0 5px 5px 0;
+    font-size: 14px;
+}
+.content>.pageCont>.right>.rightDown>.list>li>a{
+    display: block;
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.content>.pageCont>.right>.rightDown>.list>li>a>p{
+    padding-left: 15px;
+    line-height: 27px;
+}
+.content>.pageCont>.right>.rightDown>.list>li>a>p:last-child{
+    background: #ccc;
+    text-align: center;
+    padding-left: 0;
+}
+.table{
+    margin: 0;
+}
+.table-cell {
+    display: table-cell;
+    padding: 5px 0 5px 0;
+    border: 1px solid #ccc;
+    text-align: center;
+    font-size: 14px;
+}

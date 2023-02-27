@@ -1,0 +1,107 @@
+/* .nav>li:nth-child(2){
+    border-bottom: 1px solid #000;
+    line-height: 50px;
+    border-bottom: 0;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+} */
+.dataall>.sub{
+    display: block;
+}
+.dataall>.sub>li>.oneLi{
+    color: #ffffff;
+}
+
+.content>.pageCont>.right>.rightTitle>p>i:first-child{
+    background: url("../img/data_white.png")no-repeat;
+}
+
+.list-item-1 {
+    float: left;
+    width: 25px;
+    height: 20px;
+    /* margin: 2px; */
+    margin-bottom: 4px;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #9FA3A8;
+    cursor: pointer;
+}
+  
+.list-item-1-checked {
+    background-color: #616D73;
+    color: #ffffff;
+}
+
+.contents-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* width: 312px;
+    height: 300px; */
+    margin: 0;
+    font-size: 32px;
+    /* line-height: 300px; */
+    text-align: center;
+    /* border: 1px solid #000; */
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+  
+.contents-1-checked {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}
+.list-item-2 {
+    float: left;
+    width: 25px;
+    height: 20px;
+    /* margin: 2px; */
+    margin-bottom: 4px;
+    line-height: 20px;
+    font-size: 15px;
+    text-align: center;
+    border: 1px solid #9FA3A8;
+    cursor: pointer;
+}
+  
+.list-item-2-checked {
+    background-color: #616D73;
+    color: #ffffff;
+}
+
+.contents-2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* width: 312px;
+    height: 300px; */
+    margin: 0;
+    font-size: 32px;
+    /* line-height: 300px; */
+    text-align: center;
+    /* border: 1px solid #000; */
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+  
+.contents-2-checked {
+    z-index: 1;
+    opacity: 1;
+    visibility: visible;
+}

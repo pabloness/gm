@@ -1,0 +1,49 @@
+.usermanager>.sub{
+    display: block;
+}
+.usermanager>.sub>li>.oneLi{
+    color: #ffffff;
+}
+.content>.pageCont>.right>.rightTitle>p>i:first-child{
+    background: url("../img/user_white.png")no-repeat;
+}
+
+.table-cell>.listmodel{
+    display: block;
+}
+.listmodel>.listtitle{
+    cursor: pointer;
+    color:#08a2ba;
+}
+.listmodel>.listtitle>span{
+    line-height: 100%;
+}
+.listmodel>.listdrop{
+    display: none;
+    width: 70px;
+    height: auto;
+    background: #08a2ba;
+    position: fixed;
+    left: 400px;
+    /* top: 50px;
+    right: 5px; */
+}
+.listmodel>.listdrop>ul{
+    width: 100%;
+    height: 100%;
+}
+.listmodel>.listdrop>ul>li{
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    list-style: none;
+}
+.listmodel>.listdrop>ul>li>a{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+.listmodel>.listdrop>ul>li>a:hover{
+    color: #ffffff;
+}

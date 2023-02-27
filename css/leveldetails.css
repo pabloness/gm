@@ -1,0 +1,18 @@
+.datamanager>.sub{
+    display: block;
+}
+.datamanager>.sub>li>.twoLi{
+    color: #fff;
+}
+
+/*.public>.type>.words{*/
+/*    margin-top: 4px;*/
+/*    font-size: 14px;*/
+/*}*/
+/*.public>.type>.words>label{*/
+/*    position: relative;*/
+/*    padding-left: 7px;*/
+/*    !*width: 6em;*!*/
+/*    height: 26px;*/
+/*    line-height: 26px;*/
+/*}*/

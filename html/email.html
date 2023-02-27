@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/mine.css">
+    <link rel="stylesheet" href="../css/email.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/mine.js"></script>
+    <script src="../js/chartroom.js"></script>
+    <script src="../js/Cookie.js"></script>
+    <script src="../js/email.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="pageCont">
+        <div class="right fl">
+            <div class="rightTitle">
+                <p>
+                    <i></i>
+                    <span>GM工具</span>
+                    <i>&gt;</i>
+                    <span>发邮件</span>
+                </p>
+            </div>
+            <div class="rightDown">
+                <div class="mailList fl">
+                    <!-- <div class="startTime dom">
+                        <span>开始时间</span>
+                        <input type="date" id="BTime">
+                    </div>
+                    <div class="endTime dom">
+                        <span>失效时间</span>
+                        <input type="date" id="CTime">
+                    </div> -->
+                    <div class="zfid dom">
+                        <span>专服ID</span>
+                        <input type="text" id="zhuanfuId" placeholder="请输入专服ID">
+                    </div>
+                    <div class="channelSelection dom">
+                        <span>服务器选择</span>
+                        <select name="" id="selService">
+                            <option value="">所有服务器</option>
+                            <option value="">服务器一</option>
+                            <option value="">服务器二</option>
+                            <option value="">服务器三</option>
+                        </select>
+                    </div>
+                    <div class="ID dom">
+                        <span>收件角色ID</span>
+                        <input type="text" id="Emilnc">
+                    </div>
+                    <!-- <div class="range dom">
+                        <span>收件人范围</span>
+                        <p class="checkbox">
+                            <label for="all"><input type="checkbox" value="1" name="sProblem" class="vselect" id="all">所有人</label><br>
+                            <label for="vip1"><input type="checkbox" value="2" name="sProblem" class="vsele" id="vip1">VIP1</label>
+                            <label for="vip2"><input type="checkbox" value="3" name="sProblem" class="vsele" id="vip2">VIP2</label>
+                            <label for="vip3"><input type="checkbox" value="4" name="sProblem" class="vsele" id="vip3">VIP3</label>
+                            <label for="vip4"><input type="checkbox" value="5" name="sProblem" class="vsele" id="vip4">VIP4</label>
+                            <label for="vip5"><input type="checkbox" value="6" name="sProblem" class="vsele" id="vip5">VIP5</label><br>
+                            <label for="vip6"><input type="checkbox" value="7" name="sProblem" class="vsele" id="vip6">VIP6</label>
+                            <label for="vip7"><input type="checkbox" value="8" name="sProblem" class="vsele" id="vip7">VIP7</label>
+                            <label for="vip8"><input type="checkbox" value="9" name="sProblem" class="vsele" id="vip8">VIP8</label>
+                            <label for="vip9"><input type="checkbox" value="10" name="sProblem" class="vsele" id="vip9">VIP9</label>
+                            <label for="vip10"><input type="checkbox" value="11" name="sProblem" class="vsele" id="vip10">VIP10</label>
+                        </p>
+                    </div> -->
+                    <!-- <div class="addEnclosure dom">
+                        <span></span>
+                        <input type="button" class="add" value="添加到附件" onclick="Add_UserProp_Copy_table_o1()">
+                    </div> -->
+                    <!-- <div class="mailTitle dom">
+                        <span>邮件标题</span>
+                        <input type="text" id="Emilhead">
+                    </div> -->
+                    <div class="mailCont dom">
+                        <span>邮件内容</span>
+                        <textarea id="content"></textarea>
+                    </div>
+                    <div class="propName dom">
+                        <span>附件内容</span>
+                        <input type="text" id="itemdata">
+                    </div>
+                    <div class="submit dom">
+                        <span></span>
+                        <input id="sendbtn" type="submit" value="发送邮件">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

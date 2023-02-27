@@ -1,0 +1,82 @@
+.machineRecharge>.sub{
+    display: block;
+}
+
+.machineRecharge>.sub>li>.threeLi{
+    color: #fff;
+}
+
+.rightDown>.rechargeList>div{
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+}
+.rightDown>.rechargeList>div>span{
+    display: inline-block;
+    width: 106px;
+    text-align: right;
+    margin-right: 10px;
+}
+.rightDown>.rechargeList>div>input[type=text],input[type=date]{
+    width: 275px;
+    height: 26px;
+    border-width: 1px;
+    border-style: solid;
+    border-left-color: #c5c5c5;
+    border-top-color: #c5c5c5;
+    border-right-color: #e0e0e0;
+    border-bottom-color: #e0e0e0;
+    line-height: 26px;
+    outline: none;
+    background: url("../img/inputbg.png");
+    padding: 0 10px;
+}
+.rightDown>.rechargeList>.range{
+    padding-bottom: 110px;
+}
+.rightDown>.rechargeList>.range>span{
+    float: left;
+}
+.rightDown>.rechargeList>div>p{
+    display: inline-block;
+}
+.rightDown>.rechargeList>div>p>label{
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 13px;
+}
+.rightDown>.rechargeList>div>p>label>input{
+    vertical-align: middle;
+    width: 15px;
+    height: 16px;
+    margin-right: 5px;
+}
+.rightDown>.rechargeList>div>select{
+    width: 297px;
+    height: 26px;
+    line-height: 26px;
+}
+.rightDown>.rechargeList>.addEnclosure{
+    margin-bottom: 25px;
+}
+.rightDown>.rechargeList>div>input[type=button]{
+    border: none;
+    background: #08a2ba;
+    padding: 5px 20px;
+    color: #fff;
+    margin-left: 182px;
+    cursor: pointer;
+}
+.rightDown>.rechargeList>div>input[type=submit]{
+    border: none;
+    background: #08a2ba;
+    padding: 5px 20px;
+    color: #fff;
+    margin-left: 90px;
+    cursor: pointer;
+}
+@media screen and (min-width: 1200px) and (max-width: 1680px){
+    .rightDown>.rechargeList {
+        width: 45%;
+    }
+}

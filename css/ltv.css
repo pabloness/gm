@@ -1,0 +1,6 @@
+.datamanager>.sub{
+    display: block;
+}
+.datamanager>.sub>li>.fifLi{
+    color: #fff;
+}

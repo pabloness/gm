@@ -1,0 +1,159 @@
+.usermanager>.sub{
+    display: block;
+}
+
+.usermanager>.sub>li>.threeLi{
+    color: #ffffff;
+}
+
+.content>.pageCont>.right>.rightTitle>p>i:first-child{
+    background: url("../img/user_white.png")no-repeat;
+}
+
+.fff{
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+.fff>.words{
+    margin-top: 6px;
+}
+
+.fff>.choose{
+    position: relative;
+    top: 6px;
+    float: left;
+    margin-right: 21px;
+    white-space: nowrap;
+}
+.fff>.choose>button{
+
+}
+.fff>.choose>.checkboxouter {
+    float: left;
+    position: relative;
+    margin: 0 auto;
+    width: 16px;
+    height: 16px;
+    background: url("../img/radio.png");
+}
+
+.fff>.choose input[type=radio], .kv-item .choose input[type=checkbox] {
+    position: relative;
+    *position: static;
+    float: left;
+    margin-right: -16px;
+}
+.fff>.choose .checkboxouter input[type="radio"] {
+    opacity: 0;
+    filter: alpha(opacity=0);
+    background: red;
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.fff>.choose .checkboxouter .radio {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 16px;
+    width: 16px;
+    background: none;
+}
+
+.fff>.choose .checkboxouter input[type="radio"]:checked ~.radio {
+    background: url("../img/radiochecked.png");
+}
+
+.fff>.choose .text {
+    float: left;
+    padding-left: 5px;
+    *padding-left: 5px;
+    white-space: nowrap;
+    /*font-size: 14px;*/
+}
+.chatmodel>.chatrecord{
+    cursor: pointer;
+    color:#08a2ba;
+}
+/* .chatmodel>.chatrecord>span{
+    line-height: 50px;
+} */
+.chatmodel>.chatdrop{
+    display: none;
+    width: 70px;
+    height: auto;
+    background: #08a2ba;
+    position: fixed;
+    left: 400px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    /* top: 50px;
+    right: 5px; */
+}
+.chatmodel>.chatdrop>ul{
+    width: 100%;
+    height: 100%;
+}
+.chatmodel>.chatdrop>ul>li{
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    list-style: none;
+}
+.chatmodel>.chatdrop>ul>li>a{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+.chatmodel>.chatdrop>ul>li>a:hover{
+    color: #ffffff;
+}
+
+.forbidenmodel>.forbidenrecord{
+    cursor: pointer;
+    color:#08a2ba;
+}
+/* .forbidenmodel>.forbidenrecord>span{
+    line-height: 50px;
+} */
+.forbidenmodel>.forbidendrop{
+    display: none;
+    width: 70px;
+    height: auto;
+    background: #08a2ba;
+    position: fixed;
+    left: 400px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    /* top: 50px;
+    right: 5px; */
+}
+.forbidenmodel>.forbidendrop>ul{
+    width: 100%;
+    height: 100%;
+}
+.forbidenmodel>.forbidendrop>ul>li{
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    list-style: none;
+}
+.forbidenmodel>.forbidendrop>ul>li>a{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+.forbidenmodel>.forbidendrop>ul>li>a:hover{
+    color: #ffffff;
+}

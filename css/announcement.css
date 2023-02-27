@@ -1,0 +1,87 @@
+.machineRecharge>.sub{
+    display: block;
+}
+
+.machineRecharge>.sub>li>.fourLi{
+    color: #fff;
+}
+.rightDown>.tableList{
+    width: 50%;
+}
+.rightDown>.loginList>div{
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+}
+.rightDown>.loginList>div>span{
+    display: inline-block;
+    width: 106px;
+    text-align: right;
+    margin-right: 10px;
+}
+.rightDown>.loginList>div>input[type=text],input[type=date],input[type=number]{
+    width: 275px;
+    height: 26px;
+    border-width: 1px;
+    border-style: solid;
+    border-left-color: #c5c5c5;
+    border-top-color: #c5c5c5;
+    border-right-color: #e0e0e0;
+    border-bottom-color: #e0e0e0;
+    line-height: 26px;
+    outline: none;
+    background: url("../img/inputbg.png");
+    padding: 0 10px;
+}
+.rightDown>.loginList>div>select{
+    width: 297px;
+    height: 26px;
+    line-height: 26px;
+}
+.rightDown>.loginList>.addEnclosure{
+    margin-bottom: 25px;
+}
+.rightDown>.loginList>div>input[type=button]{
+    border: none;
+    background: #08a2ba;
+    padding: 5px 20px;
+    color: #fff;
+    margin-left: 182px;
+    cursor: pointer;
+}
+.rightDown>.loginList>.mailCont{
+    height: auto;
+}
+.rightDown>.loginList>.mailCont>span{
+    float: left;
+    line-height: 15px;
+}
+.rightDown>.loginList>div>textarea{
+    width: 274px;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+    margin-left: 4px;
+}
+.rightDown>.loginList>div>input[type=submit]{
+    border: none;
+    background: #08a2ba;
+    padding: 5px 20px;
+    color: #fff;
+    /*margin-left: 192px;*/
+    cursor: pointer;
+}
+.rightDown>.loginList>.loginTitle{
+    margin-bottom: 20px;
+}
+.rightDown>.loginList>.submit{
+    text-align: center;
+}
+@media screen and (min-width: 1200px) and (max-width: 1680px){
+    .rightDown>.mailList {
+        width: 45%;
+    }
+    .table-cell {
+        padding: 5px 63px;
+    }
+}

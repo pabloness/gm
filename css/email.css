@@ -1,0 +1,130 @@
+.machineRecharge>.sub{
+    display: block;
+}
+
+.machineRecharge>.sub>li>.fifLi{
+    color: #fff;
+}
+.rightDown>.mailList>div{
+    height: 50px;
+    line-height: 50px;
+    font-size: 15px;
+}
+.rightDown>.mailList>div>span{
+    display: inline-block;
+    width: 106px;
+    text-align: right;
+    margin-right: 10px;
+}
+.rightDown>.mailList>div>input[type=text],input[type=date]{
+    width: 275px;
+    height: 26px;
+    border-width: 1px;
+    border-style: solid;
+    border-left-color: #c5c5c5;
+    border-top-color: #c5c5c5;
+    border-right-color: #e0e0e0;
+    border-bottom-color: #e0e0e0;
+    line-height: 26px;
+    outline: none;
+    background: url("../img/inputbg.png");
+    padding: 0 10px;
+}
+.rightDown>.mailList>.range{
+    padding-bottom: 110px;
+}
+.rightDown>.mailList>.range>span{
+    float: left;
+}
+.rightDown>.mailList>div>p{
+    display: inline-block;
+}
+.rightDown>.mailList>div>p>label{
+    vertical-align: middle;
+    margin-right: 10px;
+    font-size: 13px;
+}
+.rightDown>.mailList>div>p>label>input{
+    vertical-align: middle;
+    width: 15px;
+    height: 16px;
+    margin-right: 5px;
+}
+.rightDown>.mailList>div>select{
+    width: 297px;
+    height: 26px;
+    line-height: 26px;
+}
+.rightDown>.mailList>.addEnclosure{
+    margin-bottom: 25px;
+}
+.rightDown>.mailList>div>input[type=button]{
+    border: none;
+    background: #08a2ba;
+    padding: 5px 20px;
+    color: #fff;
+    margin-left: 182px;
+    cursor: pointer;
+}
+.rightDown>.mailList>.mailCont{
+    height: auto;
+}
+.rightDown>.mailList>.mailCont>span{
+    float: left;
+    line-height: 15px;
+}
+.rightDown>.mailList>div>textarea{
+    width: 280px;
+    height: 100px;
+    resize: none;
+    padding: 10px;
+}
+.rightDown>.mailList>div>input[type=submit]{
+    border: none;
+    background: #08a2ba;
+    padding: 5px 20px;
+    color: #fff;
+    margin-left: 192px;
+    cursor: pointer;
+}
+.table-cell {
+    padding: 5px 0 5px 0;
+    position: relative;
+}
+.tableList .table input[type=button]{
+    /*display: block;*/
+    width: 70px;
+    height: 25px;
+    line-height: 13px;
+    border: 1px solid #ccc;
+    background: #fff;
+    padding: 6px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    color: #000;
+    /*position: absolute;*/
+    /*top: 22px;*/
+    /*right: 90px;*/
+    cursor: pointer;
+}
+.tableList .table input[type=button]:hover{
+    background: red;
+    color: #fff;
+    border: 1px solid red;
+}
+#mytable th{
+    padding: 5px 5px 5px 5px;
+    border: 1px solid #000033;
+}
+@media screen and (min-width: 1200px) and (max-width: 1680px){
+    .rightDown>.mailList {
+        width: 45%;
+    }
+    .table-cell {
+        padding: 8px 0 8px 0;
+    }
+    .tableList .table a{
+        left: 52px;
+    }
+}

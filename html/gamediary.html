@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/mine.css">
+    <link rel="stylesheet" href="../css/gamediary.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/mine.js"></script>
+    <script src="../js/chartroom.js"></script>
+    <script src="../js/Cookie.js"></script>
+    <script src="../js/gamediary.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="pageCont">
+            <div class="right fl">
+                <div class="rightTitle">
+                    <p>
+                        <i></i>
+                        <span>用户管理</span>
+                        <i>&gt;</i>
+                        <span>游戏日志</span>
+                    </p>
+                </div>
+                <div class="rightDown">
+                    <div class="public">
+                        <div class="type fl">
+                            <div class="words fl">
+                                <label for="">UId：</label>
+                            </div>
+                            <input class="fl" type="text" id="uid" placeholder="请输入昵称或UID">
+                            <div class="words fl">
+                                <label for="">服务器：</label>
+                            </div>
+                            <select class="fl" name="service" id="selservice">
+                                <option value="" id="service_1">服务器1</option>
+                                <option value="" id="service_2">服务器2</option>
+                                <option value="" id="service_3">服务器3</option>
+                            </select>
+                            <div class="words fl">
+                                <label for="">时间：</label>
+                            </div>
+                            <div class="timer fl">
+                                <input type="date" id="starttime" onchange="dateChange()"> 到 <input type="date" id="endtime" onchange="dateChange()">
+                            </div>
+                            <div class="search-button fl">
+                                <input id="searchbtn" type="button" value="搜索">
+                            </div>
+                        </div>
+                    </div>
+                        <table class="table">
+                            <thead class="table-row-group" id="table_head">
+                                <tr class="table-header-row">
+                                    <th class="table-cell">时间</th>
+                                    <th class="table-cell">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody id="table_row_body">
+
+                            </tbody>
+                        </table>
+                        <div class="pages">
+                            <div class="fenye">
+                                <a href="javascript:;" class="backpage" onclick="Fpages()" title="上一页"><<</a>
+                                <span>共<em id="total"></em>条，本页显示<em id="num"></em>条，当前是第<em id="page"></em>页</span>
+                                <a href="javascript:;" class="nextpage" onclick="Rpages()" title="下一页">>></a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

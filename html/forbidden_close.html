@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>后台管理系统</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/mine.css">
+    <link rel="stylesheet" href="../css/forbidden_close.css">
+    <script src="../js/jquery-1.12.4.min.js"></script>
+    <script src="../js/mine.js"></script>
+    <script src="../js/chartroom.js"></script>
+    <script src="../js/Cookie.js"></script>
+    <script src="../js/forbidden_close.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="pageCont">
+            <div class="right fl">
+                <div class="rightTitle">
+                    <p>
+                        <i></i>
+                        <span>用户管理</span>
+                        <i>&gt;</i>
+                        <span>禁言封号</span>
+                    </p>
+                </div>
+                <div class="rightDown">
+                    <div class="chatmodel">
+                        <div class="chatdrop" id="chatdrop">
+                            <ul>
+                                <li><a id="a1_2">2小时</a></li>
+                                <li><a id="a1_8">8小时</a></li>
+                                <li><a id="a1_24">24小时</a></li>
+                                <li><a id="a1_48">8小时</a></li>
+                                <li><a id="a1_forever">永久</a></li>
+                                <li><a id="a1_sure">正常</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="forbidenmodel">
+                        <div class="forbidendrop" id="forbidendrop">
+                            <ul>
+                                <li><a id="a2_24">24小时</a></li>
+                                <li><a id="a2_72">72小时</a></li>
+                                <li><a id="a2_120">120小时</a></li>
+                                <li><a id="a2_forever">永久</a></li>
+                                <li><a id="a2_sure">正常</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="public">
+                        <div class="type fl">
+                            <div class="words fl">
+                                <label for="">昵称/uid：</label>
+                            </div>
+                            <input class="fl" type="text" id="username" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')"
+                                   placeholder="请输入角色昵称或者uid">
+                            <div class="words fl">
+                                <label for="">服务器：</label>
+                            </div>
+                            <select class="fl" name="service" id="selservice">
+                                <option value="" id="service_1">服务器1</option>
+                                <option value="" id="service_2">服务器2</option>
+                                <option value="" id="service_3">服务器3</option>
+                            </select>
+                            <div class="search-button fl">
+                                <input id="searchbtn" type="button" value="搜索">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="chatmodel">
+                        <div class="chatdrop" id="chatdrop">
+                            <ul>
+                                <li><a id="a1_2">2小时</a></li>
+                                <li><a id="a1_8">8小时</a></li>
+                                <li><a id="a1_24">24小时</a></li>
+                                <li><a id="a1_48">48小时</a></li>
+                                <li><a id="a1_forever">永久</a></li>
+                                <li><a id="a1_sure">正常</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chatmodel">
+                        <div class="chatdrop" id="chatdrop_2">
+                            <ul>
+                                <li><a id="a2_24">24小时</a></li>
+                                <li><a id="a2_72">72小时</a></li>
+                                <li><a id="a2_120">120小时</a></li>
+                                <li><a id="a2_forever">永久</a></li>
+                                <li><a id="a2_sure">正常</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead class="table-row-group" id="table_head">
+                            <tr class="table-header-row">
+                                <th class="table-cell">openId</th>
+                                <th class="table-cell">服务器名</th>
+                                <th class="table-cell">角色昵称</th>
+                                <th class="table-cell">角色等级</th>
+                                <th class="table-cell">VIP等级</th>
+                                <th class="table-cell">充值额度</th>
+                                <th class="table-cell">战力</th>
+                                <th class="table-cell">竞技排名</th>
+                                <th class="table-cell">创建时间</th>
+                                <th class="table-cell">禁言</th>
+                                <th class="table-cell">封号</th>
+                            </tr>
+                        </thead>
+                        <tbody class="table-row-group" id="table_row_body">
+
+                        </tbody>
+                </table>
+                <div class="pages">
+                        <div class="fenye">
+                            <a href="javascript:;" class="backpage" onclick="Fpages()" title="上一页"><<</a>
+                            <span>共<em id="total"></em>条，本页显示<em id="num"></em>条，当前是第<em id="page"></em>页</span>
+                            <a href="javascript:;" class="nextpage" onclick="Rpages()" title="下一页">>></a>
+                        </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    
+    // function post(URL, PARAMS) {
+    //     let temp = document.createElement("form");
+    //     temp.action = URL;
+    //     temp.method = "post";
+    //     temp.style.display = "none";
+    //     for (var x in PARAMS) {
+    //         var opt = document.createElement("textarea");
+    //         opt.name = x;
+    //         opt.value = PARAMS[x];
+    //         alert(opt.name)
+    //         temp.appendChild(opt);
+    //     }
+    //     document.body.appendChild(temp);
+    //     temp.submit();
+    //     return temp;
+    // }
+
+    // function f() {
+    //     let c = $("input[name='forbidden']:checked").val();
+    //     let b;
+    //     console.log(c);
+
+    //     $("#startdate").change(function () {
+    //         $("#startdate").attr("value",$(this).val());
+    //         b = $("#startdate").val();
+    //     })
+    //     b = $("#startdate").val();
+    //     b = b.replace(/T/," ");
+    //     b = b+":00";
+    //     post('pages/statisticsJsp/excel.action', {html :prnhtml,cm1:'sdsddsd',cm2:'haha'});
+    //     console.log(b);
+    // }
+
+    // function optionChange(value){
+        
+    // }
+</script>
+</html>
+<!-- <div class="fff">
+    <div class="words fl">
+        <label for="">禁言：</label>
+    </div>
+    <span class="choose fl">
+            <span class="checkboxouter">
+                <input type="radio" name="forbidden" id="forbiddenopen" checked="" value="open">
+                <span class="radio"></span>
+            </span>
+            <label class="text" for="forbiddenopen">开</label>
+        </span>
+    <span class="choose">
+            <span class="checkboxouter">
+                <input type="radio" name="forbidden" id="forbiddenclose" checked="" value="close">
+                <span class="radio"></span>
+            </span>
+            <label class="text" for="forbiddenclose">关</label>
+    </span>
+    <span class="choose" id="forbiddentime">
+        <input type="datetime-local" id="startdate"> 到 <input type="datetime-local" id="enddate">
+    </span>
+    <span class="choose">
+        <button type="button" onclick="f()">更改禁言状态</button>
+    </span>
+</div>
+<div class="fff">
+    <div class="words fl">
+        <label for="">封号：</label>
+    </div>
+    <span class="choose fl">
+        <span class="checkboxouter">
+            <input type="radio" name="close" id="closeaccountopen" checked="">
+            <span class="radio"></span>
+        </span>
+        <label class="text" for="closeaccountopen">开</label>
+    </span>
+    <span class="choose">
+        <span class="checkboxouter">
+            <input type="radio" name="close" id="closeaccountclose" checked="">
+            <span class="radio"></span>
+        </span>
+        <label class="text" for="closeaccountclose">关</label>
+    </span>
+    <span class="choose" id="closeentime">
+        <input type="datetime-local" id="startdate_2"> 到 <input type="datetime-local" id="enddate_2">
+    </span>
+    <span class="choose">
+        <button type="button" onclick="">更改封号状态</button>
+    </span>
+</div> -->

@@ -1,0 +1,51 @@
+.machineRecharge>.sub{
+    display: block;
+}
+
+.machineRecharge>.sub>li>.sixLi{
+    color: #ffffff;
+}
+
+/* .content>.pageCont>.right>.rightTitle>p>i:first-child{
+    background: url("../img/user_white.png")no-repeat;
+} */
+
+.chatmodel>.chatrecord{
+    cursor: pointer;
+}
+.chatmodel>.chatrecord>span{
+    line-height: 100%;
+}
+.chatmodel>.chatdrop{
+    display: none;
+    width: 70px;
+    height: auto;
+    background: #08a2ba;
+    position: fixed;
+    left: 400px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    /* top: 50px;
+    right: 5px; */
+}
+.chatmodel>.chatdrop>ul{
+    width: 100%;
+    height: 100%;
+}
+.chatmodel>.chatdrop>ul>li{
+    text-align: center;
+    line-height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    list-style: none;
+}
+.chatmodel>.chatdrop>ul>li>a{
+    display: block;
+    text-decoration: none;
+    color: #000000;
+}
+.chatmodel>.chatdrop>ul>li>a:hover{
+    color: #ffffff;
+}
